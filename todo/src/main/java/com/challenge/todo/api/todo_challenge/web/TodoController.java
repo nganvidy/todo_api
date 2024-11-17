@@ -24,7 +24,7 @@ public class TodoController {
         return todoService.create(todoDto);
     }
     @PutMapping("/{uuid}")
-    BaseResponseMessage<?> update(@Valid @RequestBody TodoDto todoDto,@PathVariable("uuid") String uuid){
+    BaseResponseMessage<?> update(@RequestBody TodoDto todoDto,@PathVariable("uuid") String uuid){
         return todoService.update(todoDto,uuid);
     }
     @DeleteMapping("/{uuid}")
